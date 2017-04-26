@@ -1,0 +1,636 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		100F49341EA8E403007CC157 /* VIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F49331EA8E403007CC157 /* VIController.swift */; };
+		100F49381EA8EE35007CC157 /* Notify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F49371EA8EE35007CC157 /* Notify.swift */; };
+		1079D6351E5C214400CB9819 /* ConnectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1079D6341E5C214400CB9819 /* ConnectTests.swift */; };
+		1079D63D1E5C27C200CB9819 /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1079D63C1E5C27C200CB9819 /* LoginTests.swift */; };
+		1079D63F1E5C284800CB9819 /* BaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1079D63E1E5C284800CB9819 /* BaseTests.swift */; };
+		10AC7BB61E4897670061C073 /* PhoneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AC7BB51E4897670061C073 /* PhoneController.swift */; };
+		10AC7BB81E48A83E0061C073 /* CallController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AC7BB71E48A83E0061C073 /* CallController.swift */; };
+		10C430621E3B546800D68082 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C430611E3B546800D68082 /* AppDelegate.swift */; };
+		10C430641E3B546800D68082 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C430631E3B546800D68082 /* LoginViewController.swift */; };
+		10C430671E3B546800D68082 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10C430651E3B546800D68082 /* Main.storyboard */; };
+		10C430691E3B546800D68082 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10C430681E3B546800D68082 /* Assets.xcassets */; };
+		10C4306C1E3B546800D68082 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10C4306A1E3B546800D68082 /* LaunchScreen.storyboard */; };
+		10D2C2931E56EB1B0011F880 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D2C2921E56EB1B0011F880 /* Log.swift */; };
+		10EEF2151EAA1C82008F9ACA /* VIController+Push.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EEF2141EAA1C82008F9ACA /* VIController+Push.swift */; };
+		10EEF21B1EAA2811008F9ACA /* CallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EEF21A1EAA2811008F9ACA /* CallManager.swift */; };
+		26077EEC3EAFE0EF380ECE7C /* Pods_VoxImplantTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BF6E06BF587C666AC108865 /* Pods_VoxImplantTests.framework */; };
+		79DD11B18B5F4E82210D4D77 /* Pods_VoxImplantDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7689B4F212F125EAF06B7119 /* Pods_VoxImplantDemo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1079D6371E5C214400CB9819 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10C430561E3B546800D68082 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10C4305D1E3B546800D68082;
+			remoteInfo = VoxImplantDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		100F49331EA8E403007CC157 /* VIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIController.swift; sourceTree = "<group>"; };
+		100F49371EA8EE35007CC157 /* Notify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notify.swift; sourceTree = "<group>"; };
+		1044847E1E5717EC0095225F /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		1079D6321E5C214400CB9819 /* VoxImplantTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoxImplantTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1079D6341E5C214400CB9819 /* ConnectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectTests.swift; sourceTree = "<group>"; };
+		1079D6361E5C214400CB9819 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1079D63C1E5C27C200CB9819 /* LoginTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
+		1079D63E1E5C284800CB9819 /* BaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTests.swift; sourceTree = "<group>"; };
+		1079D6401E5C407100CB9819 /* VoxImplantTests-BrigingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VoxImplantTests-BrigingHeader.h"; sourceTree = "<group>"; };
+		10AC7BB51E4897670061C073 /* PhoneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneController.swift; sourceTree = "<group>"; };
+		10AC7BB71E48A83E0061C073 /* CallController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallController.swift; sourceTree = "<group>"; };
+		10C4305E1E3B546800D68082 /* VoxImplantDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoxImplantDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		10C430611E3B546800D68082 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		10C430631E3B546800D68082 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		10C430661E3B546800D68082 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		10C430681E3B546800D68082 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		10C4306B1E3B546800D68082 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		10C4306D1E3B546800D68082 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10C430891E3F5AE600D68082 /* VoxImplantDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VoxImplantDemo.entitlements; sourceTree = "<group>"; };
+		10D2C2921E56EB1B0011F880 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		10EEF2141EAA1C82008F9ACA /* VIController+Push.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VIController+Push.swift"; sourceTree = "<group>"; };
+		10EEF21A1EAA2811008F9ACA /* CallManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallManager.swift; sourceTree = "<group>"; };
+		4196C3BFA026A9C9B6516147 /* Pods-VoxImplantDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoxImplantDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VoxImplantDemo/Pods-VoxImplantDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		7689B4F212F125EAF06B7119 /* Pods_VoxImplantDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VoxImplantDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BF6E06BF587C666AC108865 /* Pods_VoxImplantTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VoxImplantTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B56B9EEEAEEDF0F5B04F8297 /* Pods-VoxImplantDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoxImplantDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-VoxImplantDemo/Pods-VoxImplantDemo.release.xcconfig"; sourceTree = "<group>"; };
+		ED70AFFEDE3BF05CD4E7B34E /* Pods-VoxImplantTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoxImplantTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VoxImplantTests/Pods-VoxImplantTests.release.xcconfig"; sourceTree = "<group>"; };
+		FA19B419A1414EA988E6DEDE /* Pods-VoxImplantTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoxImplantTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VoxImplantTests/Pods-VoxImplantTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1079D62F1E5C214400CB9819 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26077EEC3EAFE0EF380ECE7C /* Pods_VoxImplantTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10C4305B1E3B546800D68082 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79DD11B18B5F4E82210D4D77 /* Pods_VoxImplantDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		100F49321EA8E3F6007CC157 /* VIController */ = {
+			isa = PBXGroup;
+			children = (
+				100F49331EA8E403007CC157 /* VIController.swift */,
+				100F49371EA8EE35007CC157 /* Notify.swift */,
+				10EEF2141EAA1C82008F9ACA /* VIController+Push.swift */,
+				10EEF21A1EAA2811008F9ACA /* CallManager.swift */,
+			);
+			name = VIController;
+			path = VOXController;
+			sourceTree = "<group>";
+		};
+		1079D6331E5C214400CB9819 /* VoxImplantTests */ = {
+			isa = PBXGroup;
+			children = (
+				1079D63E1E5C284800CB9819 /* BaseTests.swift */,
+				1079D6341E5C214400CB9819 /* ConnectTests.swift */,
+				1079D63C1E5C27C200CB9819 /* LoginTests.swift */,
+				1079D6361E5C214400CB9819 /* Info.plist */,
+				1079D6401E5C407100CB9819 /* VoxImplantTests-BrigingHeader.h */,
+			);
+			path = VoxImplantTests;
+			sourceTree = "<group>";
+		};
+		10C430551E3B546800D68082 = {
+			isa = PBXGroup;
+			children = (
+				1044847E1E5717EC0095225F /* Readme.md */,
+				10C430601E3B546800D68082 /* VoxImplantDemo */,
+				1079D6331E5C214400CB9819 /* VoxImplantTests */,
+				10C4305F1E3B546800D68082 /* Products */,
+				3007ECE072FA13B0F0824B7B /* Pods */,
+				BFE2106D5950C3C6CE70D0CE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		10C4305F1E3B546800D68082 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				10C4305E1E3B546800D68082 /* VoxImplantDemo.app */,
+				1079D6321E5C214400CB9819 /* VoxImplantTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		10C430601E3B546800D68082 /* VoxImplantDemo */ = {
+			isa = PBXGroup;
+			children = (
+				100F49321EA8E3F6007CC157 /* VIController */,
+				10C430891E3F5AE600D68082 /* VoxImplantDemo.entitlements */,
+				10C430611E3B546800D68082 /* AppDelegate.swift */,
+				10C430631E3B546800D68082 /* LoginViewController.swift */,
+				10AC7BB51E4897670061C073 /* PhoneController.swift */,
+				10AC7BB71E48A83E0061C073 /* CallController.swift */,
+				10C430651E3B546800D68082 /* Main.storyboard */,
+				10C430681E3B546800D68082 /* Assets.xcassets */,
+				10C4306A1E3B546800D68082 /* LaunchScreen.storyboard */,
+				10C4306D1E3B546800D68082 /* Info.plist */,
+				10D2C2921E56EB1B0011F880 /* Log.swift */,
+			);
+			path = VoxImplantDemo;
+			sourceTree = "<group>";
+		};
+		3007ECE072FA13B0F0824B7B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4196C3BFA026A9C9B6516147 /* Pods-VoxImplantDemo.debug.xcconfig */,
+				B56B9EEEAEEDF0F5B04F8297 /* Pods-VoxImplantDemo.release.xcconfig */,
+				FA19B419A1414EA988E6DEDE /* Pods-VoxImplantTests.debug.xcconfig */,
+				ED70AFFEDE3BF05CD4E7B34E /* Pods-VoxImplantTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BFE2106D5950C3C6CE70D0CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7689B4F212F125EAF06B7119 /* Pods_VoxImplantDemo.framework */,
+				9BF6E06BF587C666AC108865 /* Pods_VoxImplantTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1079D6311E5C214400CB9819 /* VoxImplantTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1079D63B1E5C214400CB9819 /* Build configuration list for PBXNativeTarget "VoxImplantTests" */;
+			buildPhases = (
+				E837F0D35435512A46BD5F52 /* [CP] Check Pods Manifest.lock */,
+				1079D62E1E5C214400CB9819 /* Sources */,
+				1079D62F1E5C214400CB9819 /* Frameworks */,
+				1079D6301E5C214400CB9819 /* Resources */,
+				AC3B2E178B161093A7A738CE /* [CP] Embed Pods Frameworks */,
+				D2998B02DB2A8F560E2526F8 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1079D6381E5C214400CB9819 /* PBXTargetDependency */,
+			);
+			name = VoxImplantTests;
+			productName = VoxImplantTests;
+			productReference = 1079D6321E5C214400CB9819 /* VoxImplantTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		10C4305D1E3B546800D68082 /* VoxImplantDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10C4307B1E3B546800D68082 /* Build configuration list for PBXNativeTarget "VoxImplantDemo" */;
+			buildPhases = (
+				63CF04E002A51848DD54367D /* [CP] Check Pods Manifest.lock */,
+				10C4305A1E3B546800D68082 /* Sources */,
+				10C4305B1E3B546800D68082 /* Frameworks */,
+				10C4305C1E3B546800D68082 /* Resources */,
+				21423649FA2C3C1BFC3CA8D6 /* [CP] Embed Pods Frameworks */,
+				14C8A48ACD20B8DB7C17A3D9 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VoxImplantDemo;
+			productName = VoxImplantDemo;
+			productReference = 10C4305E1E3B546800D68082 /* VoxImplantDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		10C430561E3B546800D68082 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Andrey Syvrachev";
+				TargetAttributes = {
+					1079D6311E5C214400CB9819 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 25S6X4YD96;
+						ProvisioningStyle = Automatic;
+					};
+					10C4305D1E3B546800D68082 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 25S6X4YD96;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 10C430591E3B546800D68082 /* Build configuration list for PBXProject "VoxImplantDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 10C430551E3B546800D68082;
+			productRefGroup = 10C4305F1E3B546800D68082 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				10C4305D1E3B546800D68082 /* VoxImplantDemo */,
+				1079D6311E5C214400CB9819 /* VoxImplantTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1079D6301E5C214400CB9819 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10C4305C1E3B546800D68082 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10C4306C1E3B546800D68082 /* LaunchScreen.storyboard in Resources */,
+				10C430691E3B546800D68082 /* Assets.xcassets in Resources */,
+				10C430671E3B546800D68082 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14C8A48ACD20B8DB7C17A3D9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VoxImplantDemo/Pods-VoxImplantDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		21423649FA2C3C1BFC3CA8D6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VoxImplantDemo/Pods-VoxImplantDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63CF04E002A51848DD54367D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AC3B2E178B161093A7A738CE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VoxImplantTests/Pods-VoxImplantTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2998B02DB2A8F560E2526F8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VoxImplantTests/Pods-VoxImplantTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E837F0D35435512A46BD5F52 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1079D62E1E5C214400CB9819 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1079D6351E5C214400CB9819 /* ConnectTests.swift in Sources */,
+				1079D63D1E5C27C200CB9819 /* LoginTests.swift in Sources */,
+				1079D63F1E5C284800CB9819 /* BaseTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10C4305A1E3B546800D68082 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				100F49381EA8EE35007CC157 /* Notify.swift in Sources */,
+				10C430641E3B546800D68082 /* LoginViewController.swift in Sources */,
+				10AC7BB61E4897670061C073 /* PhoneController.swift in Sources */,
+				10EEF2151EAA1C82008F9ACA /* VIController+Push.swift in Sources */,
+				10D2C2931E56EB1B0011F880 /* Log.swift in Sources */,
+				100F49341EA8E403007CC157 /* VIController.swift in Sources */,
+				10C430621E3B546800D68082 /* AppDelegate.swift in Sources */,
+				10EEF21B1EAA2811008F9ACA /* CallManager.swift in Sources */,
+				10AC7BB81E48A83E0061C073 /* CallController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1079D6381E5C214400CB9819 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 10C4305D1E3B546800D68082 /* VoxImplantDemo */;
+			targetProxy = 1079D6371E5C214400CB9819 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		10C430651E3B546800D68082 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10C430661E3B546800D68082 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		10C4306A1E3B546800D68082 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10C4306B1E3B546800D68082 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1079D6391E5C214400CB9819 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA19B419A1414EA988E6DEDE /* Pods-VoxImplantTests.debug.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 25S6X4YD96;
+				INFOPLIST_FILE = VoxImplantTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.voximplant.VoxImplantTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VoxImplantTests/VoxImplantTests-BrigingHeader.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		1079D63A1E5C214400CB9819 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED70AFFEDE3BF05CD4E7B34E /* Pods-VoxImplantTests.release.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 25S6X4YD96;
+				INFOPLIST_FILE = VoxImplantTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.voximplant.VoxImplantTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VoxImplantTests/VoxImplantTests-BrigingHeader.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		10C430791E3B546800D68082 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		10C4307A1E3B546800D68082 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		10C4307C1E3B546800D68082 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4196C3BFA026A9C9B6516147 /* Pods-VoxImplantDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = VoxImplantDemo/VoxImplantDemo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Andrey Syvrachev (62K3683H9X)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 25S6X4YD96;
+				INFOPLIST_FILE = VoxImplantDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.voximplant.voximplantdemo-voip-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		10C4307D1E3B546800D68082 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B56B9EEEAEEDF0F5B04F8297 /* Pods-VoxImplantDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = VoxImplantDemo/VoxImplantDemo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Andrey Syvrachev (62K3683H9X)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 25S6X4YD96;
+				INFOPLIST_FILE = VoxImplantDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.voximplant.voximplantdemo-voip-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1079D63B1E5C214400CB9819 /* Build configuration list for PBXNativeTarget "VoxImplantTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1079D6391E5C214400CB9819 /* Debug */,
+				1079D63A1E5C214400CB9819 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10C430591E3B546800D68082 /* Build configuration list for PBXProject "VoxImplantDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10C430791E3B546800D68082 /* Debug */,
+				10C4307A1E3B546800D68082 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10C4307B1E3B546800D68082 /* Build configuration list for PBXNativeTarget "VoxImplantDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10C4307C1E3B546800D68082 /* Debug */,
+				10C4307D1E3B546800D68082 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 10C430561E3B546800D68082 /* Project object */;
+}
