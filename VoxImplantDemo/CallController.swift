@@ -39,9 +39,9 @@ class CallController: UIViewController {
                 self.callDurationLabel.text = text
         })
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            self.call.sendDTMF("123#")
-        }
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+//            self.call.sendDTMF("123#")
+//        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -66,6 +66,7 @@ class CallController: UIViewController {
         muteVideoButton.isSelected = !self.video
         self.call.add(self)
         self.call.endPoints.first!.delegate = self
+        self.call.preferredVideoCodec = "H264"
         self.call.start(withVideo: self.video, headers: nil)
 
         self.localPreview.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(switchCamera)))

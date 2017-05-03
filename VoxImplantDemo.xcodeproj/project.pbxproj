@@ -22,8 +22,8 @@
 		10D2C2931E56EB1B0011F880 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D2C2921E56EB1B0011F880 /* Log.swift */; };
 		10EEF2151EAA1C82008F9ACA /* VIController+Push.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EEF2141EAA1C82008F9ACA /* VIController+Push.swift */; };
 		10EEF21B1EAA2811008F9ACA /* CallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EEF21A1EAA2811008F9ACA /* CallManager.swift */; };
-		26077EEC3EAFE0EF380ECE7C /* Pods_VoxImplantTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BF6E06BF587C666AC108865 /* Pods_VoxImplantTests.framework */; };
-		79DD11B18B5F4E82210D4D77 /* Pods_VoxImplantDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7689B4F212F125EAF06B7119 /* Pods_VoxImplantDemo.framework */; };
+		617577F21CE148ADB14383AF /* Pods_VoxImplantDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908523B458D3CB930D670788 /* Pods_VoxImplantDemo.framework */; };
+		E20D40F9239E026BD4E961B8 /* Pods_VoxImplantTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EDD2B03B06433FA0A2C17D /* Pods_VoxImplantTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,12 +59,12 @@
 		10D2C2921E56EB1B0011F880 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		10EEF2141EAA1C82008F9ACA /* VIController+Push.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VIController+Push.swift"; sourceTree = "<group>"; };
 		10EEF21A1EAA2811008F9ACA /* CallManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallManager.swift; sourceTree = "<group>"; };
-		4196C3BFA026A9C9B6516147 /* Pods-VoxImplantDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoxImplantDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VoxImplantDemo/Pods-VoxImplantDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		7689B4F212F125EAF06B7119 /* Pods_VoxImplantDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VoxImplantDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9BF6E06BF587C666AC108865 /* Pods_VoxImplantTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VoxImplantTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B56B9EEEAEEDF0F5B04F8297 /* Pods-VoxImplantDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoxImplantDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-VoxImplantDemo/Pods-VoxImplantDemo.release.xcconfig"; sourceTree = "<group>"; };
-		ED70AFFEDE3BF05CD4E7B34E /* Pods-VoxImplantTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoxImplantTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VoxImplantTests/Pods-VoxImplantTests.release.xcconfig"; sourceTree = "<group>"; };
-		FA19B419A1414EA988E6DEDE /* Pods-VoxImplantTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoxImplantTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VoxImplantTests/Pods-VoxImplantTests.debug.xcconfig"; sourceTree = "<group>"; };
+		20EDD2B03B06433FA0A2C17D /* Pods_VoxImplantTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VoxImplantTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		53A30D158C1FF321BE604C67 /* Pods-VoxImplantTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoxImplantTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VoxImplantTests/Pods-VoxImplantTests.release.xcconfig"; sourceTree = "<group>"; };
+		57170E7B2287E52E6E57CD49 /* Pods-VoxImplantDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoxImplantDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-VoxImplantDemo/Pods-VoxImplantDemo.release.xcconfig"; sourceTree = "<group>"; };
+		63F910F8F6B69869C7274FEF /* Pods-VoxImplantTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoxImplantTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VoxImplantTests/Pods-VoxImplantTests.debug.xcconfig"; sourceTree = "<group>"; };
+		74A9A29FD9E525CFE1A959E1 /* Pods-VoxImplantDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoxImplantDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VoxImplantDemo/Pods-VoxImplantDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		908523B458D3CB930D670788 /* Pods_VoxImplantDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VoxImplantDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26077EEC3EAFE0EF380ECE7C /* Pods_VoxImplantTests.framework in Frameworks */,
+				E20D40F9239E026BD4E961B8 /* Pods_VoxImplantTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79DD11B18B5F4E82210D4D77 /* Pods_VoxImplantDemo.framework in Frameworks */,
+				617577F21CE148ADB14383AF /* Pods_VoxImplantDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,8 +118,8 @@
 				10C430601E3B546800D68082 /* VoxImplantDemo */,
 				1079D6331E5C214400CB9819 /* VoxImplantTests */,
 				10C4305F1E3B546800D68082 /* Products */,
-				3007ECE072FA13B0F0824B7B /* Pods */,
-				BFE2106D5950C3C6CE70D0CE /* Frameworks */,
+				6819E61784A971916809D2D5 /* Pods */,
+				BC8C9C4ED9B9D28CD0214128 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,22 +150,22 @@
 			path = VoxImplantDemo;
 			sourceTree = "<group>";
 		};
-		3007ECE072FA13B0F0824B7B /* Pods */ = {
+		6819E61784A971916809D2D5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4196C3BFA026A9C9B6516147 /* Pods-VoxImplantDemo.debug.xcconfig */,
-				B56B9EEEAEEDF0F5B04F8297 /* Pods-VoxImplantDemo.release.xcconfig */,
-				FA19B419A1414EA988E6DEDE /* Pods-VoxImplantTests.debug.xcconfig */,
-				ED70AFFEDE3BF05CD4E7B34E /* Pods-VoxImplantTests.release.xcconfig */,
+				74A9A29FD9E525CFE1A959E1 /* Pods-VoxImplantDemo.debug.xcconfig */,
+				57170E7B2287E52E6E57CD49 /* Pods-VoxImplantDemo.release.xcconfig */,
+				63F910F8F6B69869C7274FEF /* Pods-VoxImplantTests.debug.xcconfig */,
+				53A30D158C1FF321BE604C67 /* Pods-VoxImplantTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		BFE2106D5950C3C6CE70D0CE /* Frameworks */ = {
+		BC8C9C4ED9B9D28CD0214128 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7689B4F212F125EAF06B7119 /* Pods_VoxImplantDemo.framework */,
-				9BF6E06BF587C666AC108865 /* Pods_VoxImplantTests.framework */,
+				908523B458D3CB930D670788 /* Pods_VoxImplantDemo.framework */,
+				20EDD2B03B06433FA0A2C17D /* Pods_VoxImplantTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -177,12 +177,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1079D63B1E5C214400CB9819 /* Build configuration list for PBXNativeTarget "VoxImplantTests" */;
 			buildPhases = (
-				E837F0D35435512A46BD5F52 /* [CP] Check Pods Manifest.lock */,
+				D77E7C429D54443F580C5EB0 /* [CP] Check Pods Manifest.lock */,
 				1079D62E1E5C214400CB9819 /* Sources */,
 				1079D62F1E5C214400CB9819 /* Frameworks */,
 				1079D6301E5C214400CB9819 /* Resources */,
-				AC3B2E178B161093A7A738CE /* [CP] Embed Pods Frameworks */,
-				D2998B02DB2A8F560E2526F8 /* [CP] Copy Pods Resources */,
+				966604825804C4FFF7BF362B /* [CP] Embed Pods Frameworks */,
+				FC69E2CB8B1D50ACF9866FA6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -198,12 +198,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10C4307B1E3B546800D68082 /* Build configuration list for PBXNativeTarget "VoxImplantDemo" */;
 			buildPhases = (
-				63CF04E002A51848DD54367D /* [CP] Check Pods Manifest.lock */,
+				A184FF1B762229430C433649 /* [CP] Check Pods Manifest.lock */,
 				10C4305A1E3B546800D68082 /* Sources */,
 				10C4305B1E3B546800D68082 /* Frameworks */,
 				10C4305C1E3B546800D68082 /* Resources */,
-				21423649FA2C3C1BFC3CA8D6 /* [CP] Embed Pods Frameworks */,
-				14C8A48ACD20B8DB7C17A3D9 /* [CP] Copy Pods Resources */,
+				AB3F8EE497FF352C797D387F /* [CP] Embed Pods Frameworks */,
+				7B3BDAD0EB55491EDE70C0AB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -284,7 +284,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		14C8A48ACD20B8DB7C17A3D9 /* [CP] Copy Pods Resources */ = {
+		7B3BDAD0EB55491EDE70C0AB /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -299,37 +299,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VoxImplantDemo/Pods-VoxImplantDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		21423649FA2C3C1BFC3CA8D6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VoxImplantDemo/Pods-VoxImplantDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		63CF04E002A51848DD54367D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		AC3B2E178B161093A7A738CE /* [CP] Embed Pods Frameworks */ = {
+		966604825804C4FFF7BF362B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -344,22 +314,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VoxImplantTests/Pods-VoxImplantTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D2998B02DB2A8F560E2526F8 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VoxImplantTests/Pods-VoxImplantTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E837F0D35435512A46BD5F52 /* [CP] Check Pods Manifest.lock */ = {
+		A184FF1B762229430C433649 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -372,6 +327,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AB3F8EE497FF352C797D387F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VoxImplantDemo/Pods-VoxImplantDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D77E7C429D54443F580C5EB0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FC69E2CB8B1D50ACF9866FA6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VoxImplantTests/Pods-VoxImplantTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -435,7 +435,7 @@
 /* Begin XCBuildConfiguration section */
 		1079D6391E5C214400CB9819 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA19B419A1414EA988E6DEDE /* Pods-VoxImplantTests.debug.xcconfig */;
+			baseConfigurationReference = 63F910F8F6B69869C7274FEF /* Pods-VoxImplantTests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 25S6X4YD96;
 				INFOPLIST_FILE = VoxImplantTests/Info.plist;
@@ -449,7 +449,7 @@
 		};
 		1079D63A1E5C214400CB9819 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED70AFFEDE3BF05CD4E7B34E /* Pods-VoxImplantTests.release.xcconfig */;
+			baseConfigurationReference = 53A30D158C1FF321BE604C67 /* Pods-VoxImplantTests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 25S6X4YD96;
 				INFOPLIST_FILE = VoxImplantTests/Info.plist;
@@ -558,7 +558,7 @@
 		};
 		10C4307C1E3B546800D68082 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4196C3BFA026A9C9B6516147 /* Pods-VoxImplantDemo.debug.xcconfig */;
+			baseConfigurationReference = 74A9A29FD9E525CFE1A959E1 /* Pods-VoxImplantDemo.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -580,7 +580,7 @@
 		};
 		10C4307D1E3B546800D68082 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B56B9EEEAEEDF0F5B04F8297 /* Pods-VoxImplantDemo.release.xcconfig */;
+			baseConfigurationReference = 57170E7B2287E52E6E57CD49 /* Pods-VoxImplantDemo.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;

@@ -9,6 +9,7 @@
 import XCTest
 import VoxImplant
 
+// Use your real login/password frim voximplant.com
 let cShortUserName = "test1"
 let cUser = "\(cShortUserName)@videochat.allright.voximplant.com"
 let cPassword = "testpass"
