@@ -75,7 +75,7 @@ class CallController: UIViewController {
 
     func switchVideoResizeMode() {
         
-        let switchVIdeoResizeModeInStreams: ([VIVideoStream]!) -> () = { streams in
+        let switchVideoResizeModeInStreams: ([VIVideoStream]!) -> () = { streams in
             
             for stream in streams {
                 for renderer in stream.renderers {
@@ -87,8 +87,8 @@ class CallController: UIViewController {
             }
         }
 
-        switchVIdeoResizeModeInStreams(self.call.localVideoStreams)
-        switchVIdeoResizeModeInStreams(self.call.endPoints.first!.remoteVideoStreams)
+        switchVideoResizeModeInStreams(self.call.localVideoStreams)
+        switchVideoResizeModeInStreams(self.call.endPoints.first!.remoteVideoStreams)
     }
     
     func switchCamera() {
@@ -154,12 +154,16 @@ extension CallController: VICallDelegate {
         call.sendInfo("test info message", mimeType: "audio/aiff", headers: nil)
     }
     
-    func call(_ call: VICall!, didDisconnectWithHeaders headers: [AnyHashable : Any]!, answeredElsewhere: NSNumber!) {
-        Log.debug("didDisconnectWithHeaders:\(headers) answeredElsewhere=\(answeredElsewhere)")
+    func popup() {
         if (!alreadyPoppedUp) {
             alreadyPoppedUp = true
             self.navigationController?.popViewController(animated: true)
         }
+    }
+    
+    func call(_ call: VICall!, didDisconnectWithHeaders headers: [AnyHashable : Any]!, answeredElsewhere: NSNumber!) {
+        Log.debug("didDisconnectWithHeaders:\(headers) answeredElsewhere=\(answeredElsewhere)")
+        popup()
     }
     
     func call(_ call: VICall!, didAddLocalVideoStream videoStream: VIVideoStream!) {
@@ -169,6 +173,7 @@ extension CallController: VICallDelegate {
     
     func call(_ call: VICall!, didFailWithError error: Error!, headers: [AnyHashable : Any]!) {
         Log.debug("didFailWithError:\(error) headers=\(headers)")
+        popup()
     }
 }
 
