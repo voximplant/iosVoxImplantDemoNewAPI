@@ -18,6 +18,7 @@ class CallController: UIViewController {
     @IBOutlet weak var muteVideoButton: UIButton!
     @IBOutlet weak var holdButton: UIButton!
     
+    var useCustomCamera:Bool = false
     var video:Bool = false
     var call:VICall!
     var timer:Timer?
@@ -61,12 +62,21 @@ class CallController: UIViewController {
 //    }
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
         muteVideoButton.isSelected = !self.video
         self.call.add(self)
         self.call.endPoints.first!.delegate = self
-        self.call.preferredVideoCodec = "H264"
+        
+        if self.useCustomCamera {
+            self.call.videoSource = customCameraSource.customVideoSource
+        }else {
+            self.call.preferredVideoCodec = "H264"
+        }
+        
         self.call.start(withVideo: self.video, headers: nil)
 
         self.localPreview.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(switchCamera)))

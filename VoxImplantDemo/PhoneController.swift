@@ -88,20 +88,25 @@ class PhoneController: UIViewController {
     }
     
     
-    private func startOutgoingCall(video:Bool) {
+    private func startOutgoingCall(video:Bool, useCustomCamera: Bool) {
         let callController = createCallController()
         callController.call = voxController.outgoingCall(user: self.destUser.text!)
         callController.video = video
+        callController.useCustomCamera = useCustomCamera
         voxController.voxCallManager.reportOutgoingCall(call: callController.call, hasVideo: video)
         self.navigationController?.pushViewController(callController, animated: true)
     }
     
+    @IBAction func customVideoCallClick(_ sender: Any) {
+        self.startOutgoingCall(video: true, useCustomCamera: true )
+    }
+    
     @IBAction func videoCallClick(_ sender: Any) {
-        self.startOutgoingCall(video: true)
+        self.startOutgoingCall(video: true, useCustomCamera: false)
     }
     
     @IBAction func callClick(_ sender: Any) {
-        self.startOutgoingCall(video: false)
+        self.startOutgoingCall(video: false, useCustomCamera: false)
     }
     
     var incomingAlertController:UIAlertController?

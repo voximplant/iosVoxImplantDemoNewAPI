@@ -11,7 +11,8 @@ import VoxImplant
 
 
 var voxController:VIController!
-
+var cameraPreprocessor:CameraPreprocessor!
+var customCameraSource:CustomCameraSource!
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         Log.info("VoxImplantDemo started \(VoxImplantVersionNumber)")
         voxController = VIController()
+        
+        // uncomment to use camera preprocess callback
+        //cameraPreprocessor = CameraPreprocessor()
+        customCameraSource = CustomCameraSource()
         return true
     }
 

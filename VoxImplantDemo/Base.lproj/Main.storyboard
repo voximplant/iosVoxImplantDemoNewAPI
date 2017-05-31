@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vyI-0L-QSW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vyI-0L-QSW">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -145,18 +145,37 @@
                                     <action selector="videoCallClick:" destination="HmK-HR-LiR" eventType="touchUpInside" id="HwS-wK-Cdk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="153-1I-aJz">
+                                <rect key="frame" x="16" y="142" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.30232587799999999" green="0.62239537570000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="Video Call with Custom Video Camera">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="customVideoCallClick:" destination="HmK-HR-LiR" eventType="touchUpInside" id="vQk-xR-CYk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="AiO-cK-VvE" firstAttribute="leading" secondItem="gtv-Kg-oSL" secondAttribute="leading" id="5hi-oI-9tm"/>
-                            <constraint firstItem="FUO-K6-Pz4" firstAttribute="leading" secondItem="AiO-cK-VvE" secondAttribute="leading" id="I3e-gf-jfB"/>
-                            <constraint firstItem="AiO-cK-VvE" firstAttribute="trailing" secondItem="gtv-Kg-oSL" secondAttribute="trailing" id="JJO-hj-zrJ"/>
-                            <constraint firstItem="FUO-K6-Pz4" firstAttribute="leading" secondItem="dCz-aU-1qo" secondAttribute="leadingMargin" id="VxA-a9-TUf"/>
-                            <constraint firstItem="gtv-Kg-oSL" firstAttribute="top" secondItem="AiO-cK-VvE" secondAttribute="bottom" constant="8" symbolic="YES" id="d3G-Te-KUp"/>
-                            <constraint firstItem="FUO-K6-Pz4" firstAttribute="trailing" secondItem="AiO-cK-VvE" secondAttribute="trailing" id="gyp-r0-vzL"/>
-                            <constraint firstItem="FUO-K6-Pz4" firstAttribute="top" secondItem="bwc-MO-gDG" secondAttribute="bottom" constant="8" symbolic="YES" id="pSt-YZ-Xql"/>
-                            <constraint firstItem="FUO-K6-Pz4" firstAttribute="trailing" secondItem="dCz-aU-1qo" secondAttribute="trailingMargin" id="qLo-Wg-vXp"/>
-                            <constraint firstItem="AiO-cK-VvE" firstAttribute="top" secondItem="FUO-K6-Pz4" secondAttribute="bottom" constant="8" symbolic="YES" id="sKw-ax-EUE"/>
+                            <constraint firstItem="gtv-Kg-oSL" firstAttribute="trailing" secondItem="153-1I-aJz" secondAttribute="trailing" id="2Md-Zg-wOp"/>
+                            <constraint firstItem="gtv-Kg-oSL" firstAttribute="top" secondItem="AiO-cK-VvE" secondAttribute="bottom" constant="8" symbolic="YES" id="54i-kc-A4R"/>
+                            <constraint firstItem="FUO-K6-Pz4" firstAttribute="leading" secondItem="AiO-cK-VvE" secondAttribute="leading" id="B69-aS-JJ3"/>
+                            <constraint firstItem="AiO-cK-VvE" firstAttribute="leading" secondItem="gtv-Kg-oSL" secondAttribute="leading" id="Ea2-PJ-T7r"/>
+                            <constraint firstItem="AiO-cK-VvE" firstAttribute="top" secondItem="FUO-K6-Pz4" secondAttribute="bottom" constant="8" symbolic="YES" id="LHP-nm-NN5"/>
+                            <constraint firstItem="FUO-K6-Pz4" firstAttribute="leading" secondItem="dCz-aU-1qo" secondAttribute="leadingMargin" id="Q7c-Jf-Iot"/>
+                            <constraint firstItem="AiO-cK-VvE" firstAttribute="trailing" secondItem="gtv-Kg-oSL" secondAttribute="trailing" id="S1E-4m-9DR"/>
+                            <constraint firstItem="gtv-Kg-oSL" firstAttribute="leading" secondItem="153-1I-aJz" secondAttribute="leading" id="bP0-6R-wag"/>
+                            <constraint firstItem="FUO-K6-Pz4" firstAttribute="trailing" secondItem="AiO-cK-VvE" secondAttribute="trailing" id="fbA-Jr-ZCZ"/>
+                            <constraint firstItem="FUO-K6-Pz4" firstAttribute="top" secondItem="bwc-MO-gDG" secondAttribute="bottom" constant="8" symbolic="YES" id="sbL-eB-crb"/>
+                            <constraint firstItem="FUO-K6-Pz4" firstAttribute="trailing" secondItem="dCz-aU-1qo" secondAttribute="trailingMargin" id="vWk-MP-OHL"/>
+                            <constraint firstItem="153-1I-aJz" firstAttribute="top" secondItem="gtv-Kg-oSL" secondAttribute="bottom" constant="8" symbolic="YES" id="w2h-Kw-khb"/>
                         </constraints>
                     </view>
                     <connections>
