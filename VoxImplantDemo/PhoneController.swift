@@ -15,7 +15,8 @@ class PhoneController: UIViewController {
     @IBOutlet weak var destUser: UITextField!
     @IBOutlet weak var videoCallButton: UIButton!
     @IBOutlet weak var callButton: UIButton!
-    
+    @IBOutlet weak var customVideoCallButton: UIButton!
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
@@ -34,6 +35,12 @@ class PhoneController: UIViewController {
         let enable = (destUser.text?.characters.count)! > 0
         callButton.isEnabled = enable
         videoCallButton.isEnabled = enable
+        customVideoCallButton.isEnabled = enable
+        
+        let alpha:CGFloat = enable ? 1.0 : 0.3
+        callButton.alpha = alpha
+        videoCallButton.alpha = alpha
+        customVideoCallButton.alpha = alpha
     }
     
     override func viewDidLoad() {
@@ -63,7 +70,7 @@ class PhoneController: UIViewController {
     
     func disconnected(){
         Log.debug("disconnected")
-        self.navigationController!.popViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {

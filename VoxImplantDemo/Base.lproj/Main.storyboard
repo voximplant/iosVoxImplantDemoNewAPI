@@ -158,7 +158,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="customVideoCallClick:" destination="HmK-HR-LiR" eventType="touchUpInside" id="vQk-xR-CYk"/>
+                                    <action selector="customVideoCallClick:" destination="HmK-HR-LiR" eventType="touchUpInside" id="17N-44-NPh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -180,6 +180,7 @@
                     </view>
                     <connections>
                         <outlet property="callButton" destination="AiO-cK-VvE" id="a33-rd-Z6B"/>
+                        <outlet property="customVideoCallButton" destination="153-1I-aJz" id="9bm-6V-izA"/>
                         <outlet property="destUser" destination="FUO-K6-Pz4" id="kka-zW-5QX"/>
                         <outlet property="videoCallButton" destination="gtv-Kg-oSL" id="TLf-y0-mhZ"/>
                     </connections>
