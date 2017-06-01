@@ -17,6 +17,7 @@ class VIController: NSObject {
     override init() {
         
         VIClient.setLogLevel(.info)
+        VIClient.saveLogToFileEnable()
         self.voxClient = VIClient(delegateQueue: DispatchQueue.main)
         self.voxCallManager = CallManager(voxClient: self.voxClient)
 
