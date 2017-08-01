@@ -79,6 +79,8 @@ class LoginViewController: UIViewController {
                             gateway: gateway.text,
                             success: { (displayName, authParams) in
             
+            voxController.voxClient.registerPushNotificationsToken(voxController.voipPushToken, imToken: voxController.imPushToken)
+                                
             let phoneController = self.storyboard?.instantiateViewController(withIdentifier: "PhoneController")
             phoneController!.title = displayName
             self.navigationController?.pushViewController(phoneController!, animated: true)

@@ -8,6 +8,7 @@
 
 import UIKit
 import VoxImplant
+import UserNotifications
 
 
 var voxController:VIController!
@@ -27,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // uncomment to use camera preprocess callback
         //cameraPreprocessor = CameraPreprocessor()
         customCameraSource = CustomCameraSource()
+        
+        registerForPushNotifications()
         return true
     }
 
@@ -56,6 +59,66 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         Log.info("VoxImplantDemo === applicationWillTerminate")
+    }
+    
+    func application(
+        _ application: UIApplication,
+        didReceiveRemoteNotification userInfo: [AnyHashable : Any],
+        fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        
+        Log.info("VoxImplantDemo: received push notification")
+        
+        let notificationProcessing = VIMessengerPushNotificationProcessing.shared()
+        
+        let messengerEvent = (notificationProcessing?.processPushNotification(userInfo) as! VIMessageEvent)
+        Log.info("event = \(messengerEvent.eventType.rawValue), text = \(messengerEvent.message.text)")
+        
+        let notification = UILocalNotification()
+        notification.fireDate = NSDate(timeIntervalSinceNow: 0) as Date
+        notification.alertBody = messengerEvent.message.text
+        notification.alertAction = "open"
+        notification.hasAction = true
+        notification.soundName = "note.aiff"
+        notification.userInfo = ["UUID": "reminderID" ]
+        UIApplication.shared.scheduleLocalNotification(notification)
+        
+        completionHandler(UIBackgroundFetchResult.newData);
+    }
+    
+    func application(_ application: UIApplication,
+                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let tokenParts = deviceToken.map { data -> String in
+            return String(format: "%02.2hhx", data)
+        }
+        
+        voxController.imPushToken = deviceToken
+        
+        let token = tokenParts.joined()
+        Log.info("Device Token: \(token)")
+    }
+    
+    func application(_ application: UIApplication,
+                     didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        Log.info("Failed to register: \(error)")
+    }
+    
+    
+    func registerForPushNotifications() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
+            (granted, error) in
+            Log.info("Permission granted: \(granted)")
+            
+            guard granted else { return }
+            self.getNotificationSettings()
+        }
+    }
+    
+    func getNotificationSettings() {
+        UNUserNotificationCenter.current().getNotificationSettings { (settings) in
+            Log.info("Notification settings: \(settings)")
+            guard settings.authorizationStatus == .authorized else { return }
+            UIApplication.shared.registerForRemoteNotifications()
+        }
     }
 }
 

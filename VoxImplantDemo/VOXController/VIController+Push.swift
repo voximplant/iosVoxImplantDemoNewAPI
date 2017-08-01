@@ -33,7 +33,7 @@ extension VIController: PKPushRegistryDelegate {
     
     func pushRegistry(_ registry: PKPushRegistry, didUpdate credentials: PKPushCredentials, forType type: PKPushType) {
         Log.debug("credentials.token = \(credentials.token.tokenString()) type = \(type)")
-        self.voxClient.registerPushNotificationsToken(credentials.token)
+        self.voipPushToken = credentials.token
     }
     
     static func appState() -> String {

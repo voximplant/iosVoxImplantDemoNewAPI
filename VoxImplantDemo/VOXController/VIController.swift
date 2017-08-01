@@ -13,6 +13,8 @@ class VIController: NSObject {
 
     let voxClient:VIClient
     var voxCallManager:CallManager
+    var imPushToken:Data?
+    var voipPushToken:Data?
     
     override init() {
         
