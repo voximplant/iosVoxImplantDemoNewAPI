@@ -17,12 +17,15 @@ class CallController: UIViewController {
     @IBOutlet weak var callDurationLabel: UILabel!
     @IBOutlet weak var muteVideoButton: UIButton!
     @IBOutlet weak var holdButton: UIButton!
+    @IBOutlet weak var receiveVideoButton: UIButton!
     
     var useCustomCamera:Bool = false
-    var video:Bool = false
     var call:VICall!
     var timer:Timer?
     var alreadyPoppedUp = false
+    var incomingCall:Bool = false
+    var videoSend:Bool = false
+    var videoReceive:Bool = false
     
     override var prefersStatusBarHidden: Bool { get { return true }}
     
@@ -66,18 +69,24 @@ class CallController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-        muteVideoButton.isSelected = !self.video
+        muteVideoButton.isSelected = !self.videoSend
         self.call.add(self)
-        self.call.endPoints.first!.delegate = self
+        self.call.endpoints.first!.delegate = self
         
         if self.useCustomCamera {
             self.call.videoSource = customCameraSource.customVideoSource
-        }else {
-            self.call.preferredVideoCodec = "H264"
+        }
+        //self.call.preferredVideoCodec = "H264"
+        
+        if self.incomingCall {
+            self.call.answer(withSendVideo: self.videoSend, receiveVideo: self.videoReceive, customData: "test custom data", headers: nil)
+        } else {
+            self.call.start(withHeaders: nil)
         }
         
-        self.call.start(withVideo: self.video, headers: nil)
+        if (self.videoReceive) {
+            receiveVideoButton.isHidden = true
+        }
 
         self.localPreview.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(switchCamera)))
         self.remoteView.addGestureRecognizer(UITapGestureRecognizer(target:self, action: #selector(switchVideoResizeMode)))
@@ -98,7 +107,7 @@ class CallController: UIViewController {
         }
 
         switchVideoResizeModeInStreams(self.call.localVideoStreams)
-        switchVideoResizeModeInStreams(self.call.endPoints.first!.remoteVideoStreams)
+        switchVideoResizeModeInStreams(self.call.endpoints.first!.remoteVideoStreams)
     }
     
     func switchCamera() {
@@ -153,6 +162,18 @@ class CallController: UIViewController {
             Log.info("setHold(\(hold)) : \(String(describing: error))")
         }
     }
+    
+    @IBAction func receiveVideoClick(_ sender: UIButton) {
+        if (self.videoReceive) {
+            return
+        } else {
+            sender.isSelected = !sender.isSelected
+            sender.isHidden = true
+            self.call.startReceiveVideo(completion: { (error) in
+                Log.info("startReceiveVideo: \(String(describing: error))")
+            })
+        }
+    }
 }
 
 extension CallController: VICallDelegate {
@@ -187,8 +208,8 @@ extension CallController: VICallDelegate {
     }
 }
 
-extension CallController: VIEndPointDelegate {
-    func endPoint(_ endPoint: VIEndPoint!, didAddRemoteVideoStream videoStream: VIVideoStream!) {
+extension CallController: VIEndpointDelegate {
+    func endpoint(_ endpoint: VIEndpoint!, didAddRemoteVideoStream videoStream: VIVideoStream!) {
         let viewRenderer = VIVideoRendererView(containerView: self.remoteView)
         videoStream.addRenderer(viewRenderer)
     }

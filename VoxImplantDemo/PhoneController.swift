@@ -94,11 +94,11 @@ class PhoneController: UIViewController {
         return self.storyboard?.instantiateViewController(withIdentifier: "CallController") as! CallController
     }
     
-    
     private func startOutgoingCall(video:Bool, useCustomCamera: Bool) {
         let callController = createCallController()
-        callController.call = voxController.outgoingCall(user: self.destUser.text!)
-        callController.video = video
+        callController.call = voxController.outgoingCall(user: self.destUser.text!, videoSend: video, videoReceive: video)
+        callController.videoSend = video
+        callController.videoReceive = video
         callController.useCustomCamera = useCustomCamera
         voxController.voxCallManager.reportOutgoingCall(call: callController.call, hasVideo: video)
         self.navigationController?.pushViewController(callController, animated: true)
@@ -122,7 +122,7 @@ class PhoneController: UIViewController {
     func incomingCall(notification:Notification) {
         
         let callDescriptor = notification.userInfo!["callDescriptor"] as! CallDescriptor
-        let from = callDescriptor.call.endPoints.first!.userDisplayName
+        let from = callDescriptor.call.endpoints.first!.userDisplayName
         
         let videoStr = callDescriptor.video ? "Video ":""
         
@@ -148,8 +148,10 @@ class PhoneController: UIViewController {
 
         let callDescriptor = notification.userInfo!["callDescriptor"] as! CallDescriptor
         let callController = self.createCallController()
-        callController.video = callDescriptor.video
+        callController.videoReceive = callDescriptor.video
+        callController.videoSend = callDescriptor.video
         callController.call = callDescriptor.call
+        callController.incomingCall = true
         self.navigationController?.pushViewController(callController, animated: true)
     }
     

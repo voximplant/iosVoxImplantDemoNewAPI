@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vyI-0L-QSW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13178.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vyI-0L-QSW">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -267,6 +267,22 @@
                                     <action selector="muteVideoClick:" destination="IrO-jk-KHN" eventType="touchUpInside" id="Ks7-FH-uow"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1V-s6-tme">
+                                <rect key="frame" x="234" y="409" width="115" height="50"/>
+                                <color key="backgroundColor" red="0.30232587799999999" green="0.62239537570000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="4j6-wd-4pT"/>
+                                    <constraint firstAttribute="height" constant="50" id="sKb-Kx-dyl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Receive video">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="receiveVideoClick:" destination="IrO-jk-KHN" eventType="touchUpInside" id="6V5-AI-bs3"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ync-R5-wNT">
                                 <rect key="frame" x="10" y="427" width="100" height="50"/>
                                 <color key="backgroundColor" red="0.30232587799999999" green="0.62239537570000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -337,6 +353,8 @@
                             <constraint firstItem="X0B-Z2-HNs" firstAttribute="top" secondItem="zoV-Ym-uJI" secondAttribute="bottom" constant="10" id="LKl-tO-f39"/>
                             <constraint firstAttribute="trailingMargin" secondItem="huk-JL-eYq" secondAttribute="trailing" constant="10" id="NT5-tP-j45"/>
                             <constraint firstItem="ync-R5-wNT" firstAttribute="leading" secondItem="Hgj-PN-Nyi" secondAttribute="leading" constant="10" id="OID-ot-Wmp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="a1V-s6-tme" secondAttribute="trailing" constant="10" id="Oqb-J4-GgK"/>
+                            <constraint firstItem="huk-JL-eYq" firstAttribute="top" secondItem="a1V-s6-tme" secondAttribute="bottom" constant="10" id="YVM-Xl-Fh2"/>
                             <constraint firstItem="t9J-eW-FNQ" firstAttribute="top" secondItem="udF-vM-tcJ" secondAttribute="bottom" id="c9T-gX-Hwq"/>
                             <constraint firstItem="zoV-Ym-uJI" firstAttribute="leading" secondItem="Hgj-PN-Nyi" secondAttribute="leading" constant="10" id="cOJ-VW-VIG"/>
                             <constraint firstItem="K1w-0i-2xh" firstAttribute="top" secondItem="wbW-yt-qPx" secondAttribute="bottom" constant="10" id="dFP-t9-FvI"/>
@@ -357,6 +375,7 @@
                         <outlet property="holdButton" destination="Onl-xB-8nC" id="cic-eA-57o"/>
                         <outlet property="localPreview" destination="huk-JL-eYq" id="7xR-Zp-9aU"/>
                         <outlet property="muteVideoButton" destination="wbW-yt-qPx" id="bdE-pK-lB4"/>
+                        <outlet property="receiveVideoButton" destination="a1V-s6-tme" id="hjH-Wc-jI1"/>
                         <outlet property="remoteView" destination="Thz-G8-3jL" id="OVW-f1-0fm"/>
                     </connections>
                 </viewController>
@@ -369,7 +388,7 @@
             <objects>
                 <navigationController id="vyI-0L-QSW" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Iq-EE-4m0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>

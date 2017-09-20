@@ -55,9 +55,9 @@ class CallManager: NSObject {
 
 extension CallManager: VIClientCallManagerDelegate {
     
-    func client(_ client: VIClient!, didReceiveIncomingCall call: VICall!, video: Bool, headers: [AnyHashable : Any]!) {
+    func client(_ client: VIClient!, didReceiveIncomingCall call: VICall!, withIncomingVideo video: Bool, headers: [AnyHashable : Any]!) {
         Log.debug("didReceiveIncomingCall(\(call)) video=\(video) headers=\(headers)")
-        self.reportIncomingCall(call: call, handle: call.endPoints.first!.userDisplayName, hasVideo: video)
+        self.reportIncomingCall(call: call, handle: call.endpoints.first!.userDisplayName, hasVideo: video)
     }
 }
 

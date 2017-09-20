@@ -59,8 +59,8 @@ class VIController: NSObject {
         self.voxClient.disconnect()
     }
     
-    func outgoingCall(user:String) -> VICall {
-        return self.voxClient.call(toUser: user, customData: "VoxImplant Demo Custom Data")
+    func outgoingCall(user:String, videoSend:Bool, videoReceive: Bool) -> VICall {
+        return self.voxClient.call(toUser: user, withSendVideo: videoSend, receiveVideo: videoReceive, customData: "VoxImplant Demo Custom Data")
     }
 }
 
