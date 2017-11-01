@@ -48,8 +48,8 @@ extension VIController: PKPushRegistryDelegate {
         Log.debug(" === didReceiveIncomingPushWith = \(payload) type = \(type)")
         
         
-        let aps = payload.dictionaryPayload["aps"] as! Dictionary<AnyHashable,Any>
-        if aps["voximplant"] != nil {
+        let voximplant = payload.dictionaryPayload["voximplant"] as? Dictionary<AnyHashable,Any>
+        if voximplant != nil {
             self.voxClient.handlePushNotification(payload.dictionaryPayload)
         }
         
