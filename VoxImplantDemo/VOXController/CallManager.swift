@@ -85,6 +85,8 @@ extension CallManager: CXProviderDelegate {
     @available(iOS 10.0, *)
     public func providerDidReset(_ provider: CXProvider) {
         Log.debug("CXCall providerDidReset \(provider)")
+
+        VIAudioManager.shared().callKitStopAudio()
     }
     
     private func createCallDescriptor(_ call: VICall, _ hasVideo:Bool) -> CallDescriptor {
@@ -105,6 +107,8 @@ extension CallManager: CXProviderDelegate {
     }
     
     func reportOutgoingCall(call: VICall, hasVideo: Bool){
+        VIAudioManager.shared().callKitReleaseAudioSession();
+
         let callDescriptor = createCallDescriptor(call, hasVideo)
         provider.reportOutgoingCall(with: callDescriptor.uuid, startedConnectingAt: Date())
     }
@@ -134,6 +138,12 @@ extension CallManager: CXProviderDelegate {
                 if (error != nil) {
                     Log.error("CXCall reportNewIncomingCall error = \(String(describing: error))")
                 }
+
+                var audioError:NSError?
+                VIAudioManager.shared().callKitConfigureAudioSession(&audioError)
+                if (audioError != nil) {
+                    Log.error("CXCall reportNewIncomingCall audio error = \(String(describing: audioError))")
+                }
             }
         }
     }
@@ -155,14 +165,6 @@ extension CallManager: CXProviderDelegate {
         
         if let callDescriptor = calls[action.callUUID] {
             
-            // Workaround for webrtc, because first incoming call does not have audio due to incorrect category: AVAudioSessionCategorySoloAmbient
-            // webrtc need AVAudioSessionCategoryPlayAndRecord
-            do {
-                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayAndRecord)
-            } catch let error {
-                Log.debug("AVAudioSession setCategory ERROR: \(error)")
-            }
-            
             Notify.post(name: Notify.acceptIncomingCall, userInfo: ["callDescriptor":callDescriptor])
          //   calls.removeValue(forKey: action.callUUID)
         }
@@ -172,6 +174,8 @@ extension CallManager: CXProviderDelegate {
     func provider(_ provider: CXProvider, perform action: CXEndCallAction) {
         
         Log.info("CXCall CXEndCallAction")
+
+        VIAudioManager.shared().callKitStopAudio()
         
         if let callDescr = calls[action.callUUID] {
             Log.info("CXCall reject")
@@ -182,7 +186,11 @@ extension CallManager: CXProviderDelegate {
         
         action.fulfill()
     }
-    
+
+    func provider(_ provider: CXProvider, didActivate audioSession: AVAudioSession) {
+        VIAudioManager.shared().callKitStartAudio()
+    }
+
     func callDisconnected(call: VICall) {
         
     }
