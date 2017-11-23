@@ -180,7 +180,7 @@ extension CallManager: CXProviderDelegate {
         if let callDescr = calls[action.callUUID] {
             Log.info("CXCall reject")
             calls.removeValue(forKey: action.callUUID)
-            callDescr.call.stop(withHeaders: nil)
+            callDescr.call.reject(with: .decline, headers: nil)
         }
         provider.reportCall(with: action.callUUID, endedAt: Date(), reason: .declinedElsewhere)
         

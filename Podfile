@@ -6,7 +6,7 @@ target 'VoxImplantDemo' do
   use_frameworks!
 
   # Pods for VoxImplantDemo
-  pod 'VoxImplantSDK', '2.11.0'
+  pod 'VoxImplantSDK', '2.12.0'
 
   post_install do |installer|
       installer.pods_project.targets.each do |target|
@@ -20,5 +20,5 @@ end
 target 'VoxImplantTests' do
     use_frameworks!
 
-    pod 'VoxImplantSDK', '2.11.0'
+    pod 'VoxImplantSDK', '2.12.0'
 end
