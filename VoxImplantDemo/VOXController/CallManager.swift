@@ -162,7 +162,9 @@ extension CallManager: CXProviderDelegate {
     
     func provider(_ provider: CXProvider, perform action: CXAnswerCallAction) {
         Log.info("CXCall CXAnswerCallAction")
-        
+
+//        var audioError:NSError?
+//        VIAudioManager.shared().callKitConfigureAudioSession(&audioError)
         if let callDescriptor = calls[action.callUUID] {
             
             Notify.post(name: Notify.acceptIncomingCall, userInfo: ["callDescriptor":callDescriptor])
@@ -171,16 +173,32 @@ extension CallManager: CXProviderDelegate {
         action.fulfill()
     }
     
+    func provider(_ provider: CXProvider, perform action: CXPlayDTMFCallAction) {
+        if let callDescr = calls[action.callUUID] {
+            Log.info("CXCall CXPlayDTMFCallAction")
+            
+            callDescr.call.sendDTMF(action.digits)
+
+            action.fulfill()
+        } else {
+            action.fail()
+        }
+    }
+    
     func provider(_ provider: CXProvider, perform action: CXEndCallAction) {
-        
         Log.info("CXCall CXEndCallAction")
 
         VIAudioManager.shared().callKitStopAudio()
         
         if let callDescr = calls[action.callUUID] {
-            Log.info("CXCall reject")
             calls.removeValue(forKey: action.callUUID)
-            callDescr.call.reject(with: .decline, headers: nil)
+            if (callDescr.call.duration() > 0) {
+                Log.info("CXCall hangup")
+                callDescr.call.hangup(withHeaders: nil)
+            } else {
+                Log.info("CXCall reject")
+                callDescr.call.reject(with: .decline, headers: nil)
+            }
         }
         provider.reportCall(with: action.callUUID, endedAt: Date(), reason: .declinedElsewhere)
         
