@@ -1,10 +1,6 @@
-//
-//  CustomCameraSource.swift
-//  VoxImplantDemo
-//
-//  Created by Andrey Syvrachev on 12.05.17.
-//  Copyright © 2017 Andrey Syvrachev. All rights reserved.
-//
+/*
+ *  Copyright (c) 2011-2018, Zingaya, Inc. All rights reserved.
+ */
 
 import UIKit
 import VoxImplant

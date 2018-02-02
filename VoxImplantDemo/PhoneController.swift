@@ -1,10 +1,6 @@
-//
-//  PhoneController.swift
-//  VoxImplantDemo
-//
-//  Created by Andrey Syvrachev on 06.02.17.
-//  Copyright © 2017 Andrey Syvrachev. All rights reserved.
-//
+/*
+ *  Copyright (c) 2011-2018, Zingaya, Inc. All rights reserved.
+ */
 
 import Foundation
 import UIKit

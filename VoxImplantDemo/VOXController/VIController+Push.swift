@@ -1,10 +1,6 @@
-//
-//  VIControllerPush.swift
-//  VoxImplantDemo
-//
-//  Created by Andrey Syvrachev on 21.04.17.
-//  Copyright © 2017 Andrey Syvrachev. All rights reserved.
-//
+/*
+ *  Copyright (c) 2011-2018, Zingaya, Inc. All rights reserved.
+ */
 
 import UIKit
 import Foundation
